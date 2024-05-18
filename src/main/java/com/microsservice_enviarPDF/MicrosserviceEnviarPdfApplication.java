@@ -18,10 +18,16 @@ public class MicrosserviceEnviarPdfApplication {
 		final ConfigurableApplicationContext ctx =  SpringApplication.run(MicrosserviceEnviarPdfApplication.class, args);
         try {
             final Environment env = ctx.getEnvironment();
-            LOGGER.info("\n ********************** \n" + "\tAplicacao {} iniciada com sucesso!\n" + "\tDisponivel nos enderecos:\n"
-                            + "\tLocal: http://localhost:{}\n" + "\tExterno: {}\n"
-                            + "\tSwagger Url: {}\n"
-                            + "\tLocal Swagger Url: http://localhost:{}\n",
+            LOGGER.info("""
+                            
+                             **********************\s
+                            	Aplicacao {} iniciada com sucesso!
+                            	Disponivel nos enderecos:
+                            	Local: http://localhost:{}
+                            	Externo: {}
+                            	Swagger Url: {}
+                            	Local Swagger Url: http://localhost:{}
+                            """,
                     env.getProperty("spring.application.name"),
                     env.getProperty(SERVER_PORT),
                     env.getProperty(URL_APP),
