@@ -122,7 +122,7 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<configuration>
-					<mainClass>MicrosserviceEnviarPdfApplication</mainClass>
+					<mainClass>com.microsservice_enviarPDF.MicrosserviceEnviarPdfApplication</mainClass>
 					<image>
 						<builder>paketobuildpacks/builder-jammy-base:latest</builder>
 					</image>
