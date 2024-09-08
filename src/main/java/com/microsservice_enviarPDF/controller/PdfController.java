@@ -71,35 +71,4 @@ public class PdfController {
 	            return ResponseEntity.badRequest().body(null);
 	        }
 	    }
-    
-//    @GetMapping("/obterPDF")
-//    public ResponseEntity<Resource> obterPDF(Authentication authentication) throws IOException {
-//        if (authentication != null && authentication.isAuthenticated()) {
-//            try {
-//                Resource resource = resourceLoader.getResource("classpath:arquivoPDF/MarcosPAlbuquerque.pdf");
-//
-//                // Obtém o caminho do arquivo
-//                Path path = resource.getFile().toPath();
-//
-//                // Lê o conteúdo do arquivo em um array de bytes
-//                byte[] content = Files.readAllBytes(path);
-//
-//                // Configura o cabeçalho da resposta
-//                HttpHeaders headers = new HttpHeaders();
-//                headers.setContentType(MediaType.APPLICATION_PDF);
-//                headers.setContentDispositionFormData("attachment", "MarcosPAlbuquerque.pdf");
-//
-//                // Retorna a resposta com o arquivo
-//                return ResponseEntity.ok()
-//                        .headers(headers)
-//                        .body(resource);
-//            } catch (IOException e) {
-//                e.printStackTrace();
-//                return ResponseEntity.status(500).body(null);
-//            }
-//        } else {
-//            // Usuário não autenticado, retornar 401 Unauthorized
-//            return ResponseEntity.status(401).body(null);
-//        }
-//    }
 }
